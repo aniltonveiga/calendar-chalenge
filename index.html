@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Calendar</title>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="titleContainer">
+        <a id="prevMonth"><img src="./assets/arrow.png" class="leftArrow"></a>
+        <div class="calendarTitle">
+            <h3 id="calendarTitle"></h3>
+        </div>
+        <a id="nextMonth"><img src="./assets/arrow.png" class="rightArrow"></a>
+    </div>
+    <div class="calendarContainer">
+        <table id="calendar" cellspacing="0" cellpadding="0">
+            <thead class="thead">
+                <tr>
+                    <th>S</th>
+                    <th>M</th>
+                    <th>T</th>
+                    <th>W</th>
+                    <th>T</th>
+                    <th>F</th>
+                    <th>S</th>
+                </tr>
+            </thead>
+            <tbody id="calendarBody"></tbody>
+        </table>
+    </div>
+    <div class="bottomContainer">
+        <div class="buttonContainer">
+            <button id="prev" class="customButton">Prev</button>
+            <button id="next" class="customButton">Next</button>
+        </div>
+        <div class="selectContainer">
+            <h4>Jump to:</h4>
+            <select id="monthCombo" name="months" onchange="handleSearchMonth(value)">
+                <option value="0">Jan</option>
+                <option value="1">Feb</option>
+                <option value="2">Mar</option>
+                <option value="3">Apr</option>
+                <option value="4">May</option>
+                <option value="5">Jun</option>
+                <option value="6">Jul</option>
+                <option value="7">Aug</option>
+                <option value="8">Sep</option>
+                <option value="9">Oct</option>
+                <option value="10">Nov</option>
+                <option value="11">Dec</option>
+            </select>
+            <select id="yearCombo" name="year" onchange="handleSearchYear(value)"></select>
+        </div>
+    </div>
+</body>
+</html>
+<script type="module" src="js/index.js"></script>
